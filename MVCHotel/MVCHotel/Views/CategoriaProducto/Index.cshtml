@@ -1,0 +1,47 @@
+﻿@model List<CategoriaProducto>
+<hr />
+
+@{
+    ViewData["Title"] = "Categorias de los Productos";
+}
+
+<br />
+<br />
+
+<p>
+    <a asp-action="Create" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px; ">Crear nueva Categoria</a>
+</p>
+
+
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].descripcion)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcion)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.idCategoria">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.idCategoria">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

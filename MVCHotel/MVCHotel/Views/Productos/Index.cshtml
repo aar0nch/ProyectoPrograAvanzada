@@ -1,0 +1,102 @@
+﻿@model IEnumerable<MVCHotel.Models.Producto>
+
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<p>
+    <a asp-action="Create" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px; ">Agregar un Producto</a>
+</p>
+<br />
+<br />
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcionProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precioProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.categoriaProducto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcionProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                <img src="@Url.Action("GetImage", new {id = item.idProducto})" width="100" height="100" alt="@item.descripcionProducto" class="img-fluid" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precioProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.categoriaProducto.nombre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idProducto">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.idProducto">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.idProducto">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table> *@
+
+<div class="row">
+    @foreach (var producto in Model)
+    {
+        <div class="col-md-3 mb-2">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">@producto.nombreProducto</h3>
+                </div>
+                <div class="card-body">
+                    <img src="@Url.Action("GetImage", new {id = producto.idProducto})" class="card-img-top producto-imagen" alt="@producto.descripcionProducto" />
+                    <p class="card-text">@producto.descripcionProducto</p>
+                    <p class="card-text">Cantidad: @producto.cantidad</p>
+                    <p class="card-text">Precio: @producto.precioProducto</p>
+                    <p class="card-text">Categoría: @producto.categoriaProducto.nombre</p>
+                    <br />
+                    <a href="@Url.Action("Details", new {id = producto.idProducto})" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px;">Detalles</a>
+                    <a href="@Url.Action("Edit", new {id = producto.idProducto})" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px;">Editar</a>
+                    <a href="@Url.Action("Delete", new {id = producto.idProducto})" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px;">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .producto-imagen {
+        width: 200px; /* Establece un ancho fijo para las imágenes */
+        height: 200px; /* Establece una altura fija para las imágenes */
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    }
+</style>
