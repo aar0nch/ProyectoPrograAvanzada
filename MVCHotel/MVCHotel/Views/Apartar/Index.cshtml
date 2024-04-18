@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MVCHotel.Models.Producto>
+
+
+@{
+    ViewData["Title"] = "Productos";
+}
+
+@if (TempData["Exito"] != null)
+{
+    <br /><br />
+    <div class="alert alert-success" role="alert">
+        @TempData["Exito"]
+    </div>
+
+}
+
+
+
+
+<br />
+<br />
+
+
+
+<div class="row">
+    @foreach (var producto in Model)
+    {
+        <div class="col-md-3 mb-2">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">@producto.nombreProducto</h3>
+                </div>
+                <div class="card-body">
+                    <img src="@Url.Action("GetImage", new {id = producto.idProducto})" class="card-img-top producto-imagen" alt="@producto.descripcionProducto" />
+                    <p class="card-text">@producto.descripcionProducto</p>
+                    <p class="card-text">Precio: @producto.precioProducto</p>
+                    <p class="card-text">Categoría: @producto.categoriaProducto.nombre</p>
+                    <br />
+                    <a asp-action="Create" asp-route-id="@producto.idProducto" class="btn" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px;">Agregar al Carrito</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!--Prueba de cambios del commit-->
+
+<style>
+    .producto-imagen {
+        width: 200px; /* Establece un ancho fijo para las imágenes */
+        height: 200px; /* Establece una altura fija para las imágenes */
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    }
+</style>
+

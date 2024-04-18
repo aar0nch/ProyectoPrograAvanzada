@@ -6,6 +6,7 @@ using System.Numerics;
 
 namespace MVCHotel.Controllers
 {
+    [Authorize(Roles = "ADMIN")]
     public class CategoriaProductoController : Controller
     {
 

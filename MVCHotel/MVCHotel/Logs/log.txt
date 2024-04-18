@@ -1,0 +1,9 @@
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 17/4/2024 20:26:57
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 17/4/2024 20:27:23
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 17/4/2024 20:29:08
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario heidricaaron0721@gmail.com el día 17/4/2024 20:37:58
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario heidricaaron0721@gmail.com el día 17/4/2024 20:38:31
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario heidricrico@gmail.com el día 17/4/2024 20:52:14
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario heidricrico@gmail.com el día 17/4/2024 20:56:30
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 17/4/2024 20:59:47
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 17/4/2024 21:12:35

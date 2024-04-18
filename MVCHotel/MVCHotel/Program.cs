@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using MVCHotel.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace MVCHotel
 {
@@ -16,6 +17,9 @@ namespace MVCHotel
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
 
+          //  builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<ApplicationDBContext>();
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>().AddEntityFrameworkStores<ApplicationDBContext>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -29,7 +33,7 @@ namespace MVCHotel
                 app.UseHsts();
             }
 
-
+            app.MapRazorPages();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

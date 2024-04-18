@@ -14,7 +14,7 @@
 </p>
 <br />
 <br />
-@* <table class="table">
+<table class="table">
     <thead>
         <tr>
             <th>
@@ -67,31 +67,7 @@
         </tr>
 }
     </tbody>
-</table> *@
-
-<div class="row">
-    @foreach (var producto in Model)
-    {
-        <div class="col-md-3 mb-2">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">@producto.nombreProducto</h3>
-                </div>
-                <div class="card-body">
-                    <img src="@Url.Action("GetImage", new {id = producto.idProducto})" class="card-img-top producto-imagen" alt="@producto.descripcionProducto" />
-                    <p class="card-text">@producto.descripcionProducto</p>
-                    <p class="card-text">Cantidad: @producto.cantidad</p>
-                    <p class="card-text">Precio: @producto.precioProducto</p>
-                    <p class="card-text">Categoría: @producto.categoriaProducto.nombre</p>
-                    <br />
-                    <a href="@Url.Action("Details", new {id = producto.idProducto})" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px;">Detalles</a>
-                    <a href="@Url.Action("Edit", new {id = producto.idProducto})" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px;">Editar</a>
-                    <a href="@Url.Action("Delete", new {id = producto.idProducto})" class="btn-info" style="background-color: #f41414; color: #fff; padding: 5px; border-radius: 5px;">Eliminar</a>
-                </div>
-            </div>
-        </div>
-    }
-</div>
+</table> 
 
 <!--Prueba de cambios del commit-->
 

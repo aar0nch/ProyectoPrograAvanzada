@@ -25,6 +25,12 @@ namespace MVCHotel.Controllers
             return View(await applicationDBContext.ToListAsync());
         }
 
+        public async Task<IActionResult> IndexUsuarios()
+        {
+            var applicationDBContext = _context.Productos.Include(p => p.categoriaProducto);
+            return View(await applicationDBContext.ToListAsync());
+        }
+
         // GET: Productos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -97,9 +103,18 @@ namespace MVCHotel.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("idProducto,nombreProducto,descripcionProducto,cantidad,idCategoria,imagen,precioProducto")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("idProducto,nombreProducto,descripcionProducto,cantidad,idCategoria,imagen,precioProducto")] Producto producto, IFormFile imagen)
         {
-            if (id != producto.idProducto)
+            if (ModelState.IsValid)
+            {
+                //Esta linea hace que el tipo file de la imagen se copie en la variable memoryStream y se guarde en la BD como texto
+                using (var memoryStream = new MemoryStream())
+                {
+                    imagen.CopyTo(memoryStream);
+                    producto.imagen = memoryStream.ToArray();
+                }
+            }
+                if (id != producto.idProducto)
             {
                 return NotFound();
             }
