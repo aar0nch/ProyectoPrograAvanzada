@@ -117,6 +117,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\heidr\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzada\\ProyectoPrograAvanzada\\MVCHotel\\MVCHotel\\wwwroot\\images\\banner.gif",
+      "PackagePath": "staticwebassets\\images\\banner.gif"
+    },
+    {
+      "Id": "C:\\Users\\heidr\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzada\\ProyectoPrograAvanzada\\MVCHotel\\MVCHotel\\wwwroot\\images\\banner2.jpg",
+      "PackagePath": "staticwebassets\\images\\banner2.jpg"
+    },
+    {
       "Id": "C:\\Users\\heidr\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzada\\ProyectoPrograAvanzada\\MVCHotel\\MVCHotel\\wwwroot\\images\\blog_bg.jpg",
       "PackagePath": "staticwebassets\\images\\blog_bg.jpg"
     },

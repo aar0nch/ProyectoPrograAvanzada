@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MVCHotel.Controllers
 {
-    [Authorize]
+    
     public class ApartarController : Controller
     {
         private readonly ApplicationDBContext _context;
@@ -24,6 +24,7 @@ namespace MVCHotel.Controllers
             return View(await applicationDBContext.ToListAsync());
         }
 
+        [Authorize]
         public async Task<IActionResult> Create(int id)
         {
             Apartar apartar = new Apartar();
@@ -42,7 +43,7 @@ namespace MVCHotel.Controllers
                 _context.Apartars.Add(apartar);
                 _context.SaveChanges();
 
-                TempData["Exito"] = "La compra se realizó con éxito";
+                TempData["Exito"] = "Se agregó al carrito con Éxito";
 
                 return RedirectToAction(nameof(Index));
             }
@@ -50,6 +51,7 @@ namespace MVCHotel.Controllers
             return View(apartar);
         }
 
+        [Authorize]
         public async Task<IActionResult> Carrito()
         {
             string userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);

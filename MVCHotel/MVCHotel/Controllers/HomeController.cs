@@ -1,31 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVCHotel.Models;
 using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 
 namespace MVCHotel.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDBContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDBContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            Cliente cliente = new Cliente();
-
-            cliente.Id = 1;
-            cliente.Name = "Adrian";
-            cliente.Email = "adrian@gmail.com";
-
-            ViewBag.Id = cliente.Id;
-            ViewBag.Name = cliente.Name;
-            ViewBag.Email = cliente.Email;
-
-            return View();
+            var productos = _context.Productos.ToList();
+            return View(productos);
         }
 
         public IActionResult Contact() { 

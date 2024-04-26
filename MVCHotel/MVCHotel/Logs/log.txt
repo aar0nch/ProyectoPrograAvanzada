@@ -7,3 +7,13 @@ La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controla
 La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario heidricrico@gmail.com el día 17/4/2024 20:56:30
 La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 17/4/2024 20:59:47
 La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 17/4/2024 21:12:35
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 18/4/2024 18:55:05
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 18/4/2024 18:55:41
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 18/4/2024 18:56:19
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario juanito@gmail.com el día 25/4/2024 17:36:58
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario juanito@gmail.com el día 25/4/2024 17:37:42
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario juanito@gmail.com el día 25/4/2024 17:37:58
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 25/4/2024 17:42:37
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario juanito@gmail.com el día 25/4/2024 17:56:49
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario juanito@gmail.com el día 25/4/2024 19:19:10
+La acción MVCHotel.Controllers.ApartarController.Create (MVCHotel) del controlador Apartar fue ejecutada por el usuario proyecto@gmail.com el día 25/4/2024 19:23:50
